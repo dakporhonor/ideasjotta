@@ -38,11 +38,11 @@ router.post('/login', (req, res, next) => {
 router.post('/register', (req, res) => {
   // Form validation
   let errors = [];
-  if(req.body.pwd != req.body.pwd2 ) {
+  if(req.body.password != req.body.password2 ) {
     errors.push({text: 'Passwords do not match'})
   };
 
-  if(req.body.pwd.length < 3 ) {
+  if(req.body.password.length < 3 ) {
     errors.push({text: 'Password must be at least 3 characters'})
   };
 
