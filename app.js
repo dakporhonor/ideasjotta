@@ -81,6 +81,11 @@ app.get('/about', (req, res) => {
   res.render('about')
 })
 
+// Contact Route
+app.get('/contact', (req, res) => {
+  res.render('contact')
+})
+
 
 // Use routes
 app.use('/ideas', ideas) 
