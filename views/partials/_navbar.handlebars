@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a href="/" class="navbar-brand">VidJot</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+           <a class="nav-item nav-link" href="/contact">Contact Me</a>
+        </div>
+        <ul class="navbar-nav ml-auto">
+         {{#if user}}
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">Video Ideas</a>
+            <div class="dropdown-menu">
+              <a href="/ideas" class="dropdown-item">Ideas</a>
+               <a href="/ideas/add" class="dropdown-item">Add Idea</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="/users/logout" class="nav-link">Logout</a>
+          </li>
+          {{else}}
+           <li class="nav-item">
+            <a href="/users/login" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="/users/register" class="nav-link">Register</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
